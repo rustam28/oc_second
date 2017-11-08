@@ -5,6 +5,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
+    print "dispatching request"
     r = requests.get('http://ocfirst/')
     print r.text
     return r.text
